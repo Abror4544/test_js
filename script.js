@@ -33,13 +33,11 @@ const appendInfo = (arr) => {
 
 }
 
-
 // change null to appropriate
 const fixCoursesPrice = (arr) => arr.map((e, i) => {
     e.prices = e.prices.map((e, i) => e == null && i == 0 ? e = 0 : e == null && i == 1 ? e = Infinity : e)
     return e
 })
-
 
 // filter data by range
 const filterCourses = (arr, range) => {
